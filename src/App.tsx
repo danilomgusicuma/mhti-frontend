@@ -1,25 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { ThemeProvider } from '@emotion/react';
+import { Typography } from '@mui/material';
+import theme from './theme/Theme';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Typography variant='h2'>The SafeSpace Solution;</Typography>
+      <Typography variant='body1'>Our goal is not to serve as a self diagnosis or replace the need of searching for professional help, but to raise awareness on the theme and encourage people to seek help if needed.</Typography>
+      <Typography variant='subtitle1'>Our goal is not to serve as a self diagnosis or replace the need of searching for professional help, but to raise awareness on the theme and encourage people to seek help if needed.</Typography>
+      <Typography variant='subtitle2'>Our goal is not to serve as a self diagnosis or replace the need of searching for professional help, but to raise awareness on the theme and encourage people to seek help if needed.</Typography>
+      <Typography variant='button'>Our goal is not to serve as a self diagnosis or replace the need of searching for professional help, but to raise awareness on the theme and encourage people to seek help if needed.</Typography>
+    </ThemeProvider>
   );
 }
 
